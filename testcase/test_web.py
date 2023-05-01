@@ -10,7 +10,8 @@ from common.screenShot import ScreenShot
 
 class TestLogin(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Edge()
+        # self.driver = webdriver.Firefox()
         self.url = SearchPage.url
         self.driver.maximize_window()
         self.driver.implicitly_wait(30)
@@ -30,7 +31,7 @@ class TestLogin(unittest.TestCase):
         time.sleep(2)
         # 断言
         try:
-            self.assertIn(self.page.login_name_content_assert_wrong, login_name)
+            self.assertIn(self.page.login_name_content_assert, login_name)
         except AssertionError:
             ScreenShot(self.driver).screen_shot()
             raise AssertionError
@@ -50,7 +51,7 @@ class TestLogin(unittest.TestCase):
         alert_content = self.page.alert.text
         time.sleep(2)
         try:
-            self.assertIn(self.page.login_fail_content_assert_wrong, alert_content)
+            self.assertIn(self.page.login_fail_content_assert, alert_content)
         except AssertionError:
             ScreenShot(self.driver).screen_shot()
             raise AssertionError

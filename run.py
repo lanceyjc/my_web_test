@@ -24,7 +24,7 @@ if __name__ == '__main__':
     runner.run(cases)
     fp.close()
     # 向指定邮箱发送测试报告的html文件
-    time.sleep(6)
+    # time.sleep(6)
     # 查找最新生成的测试报告地址
     new_report_addr = SendEmail().acquire_report_address(test_reports_address)
     # 自动发送邮件

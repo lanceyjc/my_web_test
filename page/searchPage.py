@@ -17,7 +17,7 @@ class SearchPage(PageObject):
     user_pw = PageElement(name="user_pw")
     login_btn = PageElement(class_name="loginbtn1")
     alert = PageElement(css=".layui-layer-content")
-    login_name = PageElement(css="a[href='http://localhost:8080/phpshe1.7/user.php']")
+    login_name = PageElement(css="a[href='http://www.phpshe.com/demo/phpshe/user.php']")
 
 
 

@@ -4,4 +4,5 @@
 
 
 class Url():
-    base_url = "http://localhost:8080/phpshe1.7/"
+    base_url = "http://www.phpshe.com/demo/phpshe/"
+    # base_url = "http://www.baidu.com"
